@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form method ='POST'  action="{% if job %} {% url 'job.update' job.id %} {% else %} {% url 'job.store'%} {% endif %}" class="" enctype="multipart/form-data" style="border:1px solid #ccc">
+      {% csrf_token %} 
+        <div class="container">
+         
+          <p>Please fill in this form to create job.</p>
+          <hr>
+      
+          <label for="title"><b>title</b></label>
+          <input type="text" placeholder="title" name="title" required>
+      
+          <label for="description"><b>description</b></label>
+          <input type="text" placeholder="description" name="description" required>
+
+          <label for="location"><b>location</b></label>
+          <input type="text" placeholder="location" name="location" required>
+      
+          <label for="type"><b>type</b></label>
+          <input type="text" placeholder="type" name="type" required>
+
+          <label for="category"><b>category</b></label>
+          <input type="text" placeholder="category" name="category" required>
+
+
+          <label for="last_date"><b>last_date</b></label>
+          <input type="date" placeholder="last_date" name="last_date" required>
+
+
+          <label for="last_date"><b>company_name</b></label>
+          <input type="text" placeholder="company_name" name="company_name" required>
+
+
+          <label for="website"><b>website</b></label>
+          <input type="text" placeholder="website" name="website" required>
+
+
+
+
+          <label for="form-control">Upload  Driver Photo</label>
+          <input type="file" class="image-input" id="photo" name="job_photo" accept="image/jpeg, image/png, image/jpg">
+          <img id="photo" src="{{vechal.job_photo.url}}" />
+          <div id="display-image"></div>
+            
+
+         
+          
+          
+          <button type="submit" class="btn btn-submit"> {%if job %} Update {% else %} Submit {% endif %}</button>
+          
+        </div>
+      </form>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LandAtJob</title>
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="static/css/images/b" />
+    
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+   
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-black">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images\logo.jpg" class="logo logo-display"   height=50px alt=""></a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a> 
+              </li>
+
+              <li class="nav-item cta cta-colored  ms-lg-3"><a href="{% url 'login' %}" class="btn btn-danger">Post a Job</a></li>
+              <li class="nav-item cta cta-colored  ms-lg-3"><a href="{% url 'JobSeeker.login' %}" class="btn btn-danger">Want  a Job</a></li>
+
+
+
+              
+            </ul>
+            
+          </div>
+        </div>
+    </nav>
+
+    <div class="slider-wrapper">
+        <div class="slide1  min-vh-100  bg-cover d-flex allign-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h6>More than 1000 Open Jobs</h6>
+                        <h1>Your Dream Job is Waiting</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"> </script>
+    <script src="js/owl.carousel.min.js"></script>
+    
+
+
+
+
+  </body>  
+</html>
+
+
+
+
+
+
+
+
